@@ -16,7 +16,7 @@ while valid_flag:
     #explicitly convert user_input to integer
     int(user_input)
 
-    #append user_input to number_list
+    #append user_input to number_list``
     number_list.append(user_input)
 
     #evaluate whether number_list.count(user_input) is higher than high_duplicate_count
