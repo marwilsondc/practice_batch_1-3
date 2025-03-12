@@ -1,7 +1,27 @@
 #initialize valid_flag, number_list, high_duplicate, high_duplicate_count
+valid_flag = True
+number_list = list()
+high_duplicate = 0
+high_duplicate_count = 0
+
 #create while loop to keep asking user for inputs
-#evaluate user_input if invalid (if statement + break) and set valid_flag to false if true
-#append user_input to number_list
-#evaluate whether number_list.count(user_input) is higher than high_duplicate_count
-#if true, overwrite the value of high_duplicate_count and high_duplicate
+while valid_flag:
+    user_input = input("input a number = ")
+
+    #evaluate user_input if invalid (if statement + break) and set valid_flag to false if true
+    if user_input.isalpha() or user_input.isspace():
+        valid_flag = False
+        break
+
+    #append user_input to number_list
+    number_list.append(int(user_input))
+
+    #evaluate whether number_list.count(user_input) is higher than high_duplicate_count
+    if number_list.count(user_input) > high_duplicate_count:
+
+        #if true, overwrite the value of high_duplicate_count and high_duplicate
+        high_duplicate_count = number_list.count(user_input)
+        high_duplicate = user_input
+   
 #print(high_duplicate)
+print(high_duplicate)
