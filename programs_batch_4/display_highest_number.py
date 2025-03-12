@@ -12,11 +12,11 @@ while valid_flag:
         break
 
     #explicitly convert user_input to integer
-    int(user_input)
+    convert_input = int(user_input)
 
     #evaluate whether user_input is higher than current_highest_number
-    if user_input > current_highest_number:
-        current_highest_number = user_input
+    if convert_input > current_highest_number:
+        current_highest_number = convert_input
 
     #print current_highest_number
     print(current_highest_number)

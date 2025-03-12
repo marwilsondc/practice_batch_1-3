@@ -14,17 +14,17 @@ while valid_flag:
         break
 
     #explicitly convert user_input to integer
-    int(user_input)
+    convert_input = int(user_input)
 
     #append user_input to number_list``
-    number_list.append(user_input)
+    number_list.append(convert_input)
 
     #evaluate whether number_list.count(user_input) is higher than high_duplicate_count
-    if number_list.count(user_input) > high_duplicate_count:
+    if number_list.count(convert_input) > high_duplicate_count:
 
         #if true, overwrite the value of high_duplicate_count and high_duplicate
-        high_duplicate_count = number_list.count(user_input)
-        high_duplicate = user_input
+        high_duplicate_count = number_list.count(convert_input)
+        high_duplicate = convert_input
 
     #print(high_duplicate)
     print(high_duplicate)
